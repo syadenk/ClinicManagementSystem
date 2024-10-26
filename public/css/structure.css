@@ -1,0 +1,257 @@
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.scheduledata {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.selected {
+    background-color: #d0e6f1; /* Change this color to highlight the selected row */
+}
+
+th.scheduledata {
+    background-color: #0c4759;
+    color: white;
+}
+
+/* Buttons style */
+#prevWeek, #nextWeek {
+    background-color: #0c4759;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.view-schedule {
+    background-color: #0c4759;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.view-schedule:hover {
+    background-color: #073745;
+}
+
+#prevWeek:hover, #nextWeek:hover {
+    background-color: #073745;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #0c4759; /* Same as header color */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav button {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+    width:max-content;
+}
+
+.sidenav button:hover {
+    color: #0c4759;
+    background-color: #fff;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.content {
+    margin-left: 20px;
+    padding: 16px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 48px;
+    color: black;
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    width: 50%;
+}
+  
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.rounded-box {
+    width: 1000px;
+    height:500px;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.inv-divider {
+    width: 400px;
+}
+
+.divider {
+    width: 580px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+    transition: 0.5s;
+    padding:1%;
+}
+.divider:hover {
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    min-height:100vh;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.Login {
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    background-color: #0c4759;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.Login :hover {
+    background-color: #09404a; /* This changes color on hover */
+}
+
+.header-1 {
+    background-color: green;
+}
+
+.centerize-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-button {
+    width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    color: black;
+    
+}
+
+.message {
+    background-color:black;
+    color:#fff;
+    margin:10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+th, td {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Optional: Add hover effect for rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Center table and box-shadow to give it a form-like outline */
+table {
+    margin: 20px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}

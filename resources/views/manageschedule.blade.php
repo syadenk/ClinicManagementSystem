@@ -36,15 +36,13 @@
 
             <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <a href=""><button >Appointment</button></a>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
             <a href="{{url('manageservices')}}"><button >Services</button></a>
 
             <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
 
             <a href="{{url('manageadmin')}}"><button >Staff</button></a>
-
-            <a href=""><button>Report</button></a>
 
             <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
             

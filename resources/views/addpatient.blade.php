@@ -32,40 +32,20 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                    <button style="margin-top:20%;">Patient</button>
-            </form>
+            <a href="{{url('adminhome')}}"><button style="margin-top:20%;">Home</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                <button >Appointment</button>
-            </form>
+            <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <button >Services</button>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                <button >Doctors</button>
-            </form>
+            <a href="{{url('manageservices')}}"><button >Services</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button >Staff</button>
-            </form>
+            <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button>Report</button>
-            </form>
+            <a href="{{url('manageadmin')}}"><button >Staff</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button style="margin-top:20%;">Log Out</button>
-            </form>
+            <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
+            
         </div>
         <div style="display:flex; justify-content: flex-end; float:right; align-items:right; ">
             <form action="" method="GET">

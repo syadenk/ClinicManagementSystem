@@ -32,26 +32,20 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                    <button style="margin-top:20%;">Profile</button>
-            </form>
+            <a href="{{url('adminhome')}}"><button style="margin-top:20%;">Home</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                <button >Schedule</button>
-            </form>
+            <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                <button >Records</button>
-            </form>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="patientID" value="">
-                <button style="margin-top:20%;">Log Out</button>
-            </form>
+            <a href="{{url('manageservices')}}"><button >Services</button></a>
+
+            <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
+
+            <a href="{{url('manageadmin')}}"><button >Staff</button></a>
+
+            <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
+            
         </div>
 
         <div style="display:flex; justify-content: flex-end; float:right; align-items:right; ">

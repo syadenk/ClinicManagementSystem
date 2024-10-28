@@ -32,15 +32,19 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
 
-            <a href="{{url('home')}}"><button style="margin-top:20%;">Home</button></a>
+            <a href="{{url('adminhome')}}"><button style="margin-top:20%;">Home</button></a>
 
-            <a href="{{url('profile')}}"><button >Profile</button></a>
+            <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <a href="{{url('appointment')}}"><button>Appointment</button></a>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
-            <a href="{{url('service')}}"><button >Services</button></a>
+            <a href="{{url('manageservices')}}"><button >Services</button></a>
 
-            <a href="{{url('logout')}}"><button style="margin-top:20%;">Log Out</button></a>
+            <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
+
+            <a href="{{url('manageadmin')}}"><button >Staff</button></a>
+
+            <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
 
         </div>
 

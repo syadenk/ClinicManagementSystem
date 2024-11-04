@@ -9,4 +9,8 @@ class Doctor extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    protected $primaryKey = 'doctorID';
+
+    protected $keyType = 'string'; 
 }

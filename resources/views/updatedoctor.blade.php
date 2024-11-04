@@ -7,7 +7,7 @@
     <div>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/structure.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font.css') }}"/>
-        <script src="js/sidebar.js"></script>
+        <script src="{{asset('js/sidebar.js')}}"></script>
         <link rel="stylesheet" href="">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,26 +32,21 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                    <button style="margin-top:20%;">Profile</button>
-            </form>
+            <a href="{{url('adminhome')}}"><button style="margin-top:20%;">Home</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                <button >Schedule</button>
-            </form>
+            <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="patientID" value="">
-                <button >Records</button>
-            </form>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="patientID" value="">
-                <button style="margin-top:20%;">Log Out</button>
-            </form>
+            <a href="{{url('manageservices')}}"><button >Services</button></a>
+
+            <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
+
+            <a href="{{url('manageadmin')}}"><button >Staff</button></a>
+
+            <a href="{{url('manageschedule')}}"><button >Schedule</button></a>
+
+            <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
         </div>
 
         <div style="display:flex; justify-content: flex-end; float:right; align-items:right; ">
@@ -60,7 +55,7 @@
                 <button style="margin-top:13%;">
                     <div style="display:flex; justify-content: center; align-items: center; height:40px; width:auto;" class="profile-button">
                         <img src="{{ asset('img/user.png') }}" alt="" height="30px" width="30px" style="margin-right:10px;">
-                        <p >{{ $doctor->doctorID}}</p>
+                        <p >{{ $staff->staffID }}</p>
                     </div>
                 </button>
             </form>
@@ -86,7 +81,7 @@
             <p class="general-font">Doctor's data in selection: {{$doctor->doctorID}}</p>
             <div>
                 <form method="POST" action="{{url('updateDoctorForm', ['doctorID'=>$doctor->doctorID])}}">
-                @csrf
+                    @csrf
                     <p style="margin-top:10px;" class="general-large-font">Personal Information</p>
                     <div style="padding:2%;">
                         <label for="name" value="" class="general-font">Doctor ID</label>
@@ -123,8 +118,8 @@
                         <p class="general-font" style="color:red; margin:10px;">{{ session('PasswordRequired') }}</p>
                     @endif
                 </form>
-                <form method="POST" action="{{url('deleteDoctor',['doctorID'=>$doctor->doctorID])}}"></form>
-                @csrf
+                <form method="POST" action="{{url('deleteDoctor',['doctorID'=>$doctor->doctorID])}}">
+                    @csrf
                     <center><button type="submit" style="background-color: red; margin-top:1%;" class="Login">Delete</button></center>
                 </form>
             </div>

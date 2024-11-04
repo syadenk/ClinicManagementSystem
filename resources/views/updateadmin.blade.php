@@ -7,7 +7,7 @@
     <div>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/structure.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font.css') }}"/>
-        <script src="js/sidebar.js"></script>
+        <script src="{{asset('js/sidebar.js')}}"></script>
         <link rel="stylesheet" href="">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,8 @@
             <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
 
             <a href="{{url('manageadmin')}}"><button >Staff</button></a>
+
+            <a href="{{url('manageschedule')}}"><button >Schedule</button></a>
 
             <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
 

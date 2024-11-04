@@ -14,7 +14,8 @@ class UpdateDoctorController extends Controller
         return view('updatedoctor', compact('doctor','staff'));
     }
 
-    public function update(Request $request, $doctorID){
+    public function update(Request $request){
+        $doctorID=$request->doctorID;
         $doctor = Doctor::where('doctorID', $doctorID)->first();
         $doctorName= $request->doctorName;
         $doctorPassword= $request->doctorPassword;

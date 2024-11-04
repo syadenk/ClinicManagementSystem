@@ -7,7 +7,7 @@
     <div>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/structure.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font.css') }}"/>
-        <script src="js/sidebar.js"></script>
+        <script src="{{asset('js/sidebar.js')}}"></script>
         <link rel="stylesheet" href="">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,40 +32,22 @@
         <div id="mySidenav" class="sidenav">
             <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                    <button style="margin-top:20%;">Patient</button>
-            </form>
+            <a href="{{url('adminhome')}}"><button style="margin-top:20%;">Home</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                <button >Appointment</button>
-            </form>
+            <a href="{{url('managepatients')}}"><button>Patient</button></a>
 
-            <button >Services</button>
+            <a href="{{url('manageappointment')}}"><button >Appointment</button></a>
 
-            <form action="" method="GET">
-                <input type="hidden" name="staffID" value="">
-                <button >Doctors</button>
-            </form>
+            <a href="{{url('manageservices')}}"><button >Services</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button >Staff</button>
-            </form>
+            <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button>Report</button>
-            </form>
+            <a href="{{url('manageadmin')}}"><button >Staff</button></a>
 
-            <form action="" method="POST">
-            @csrf
-            <input type="hidden" name="staffID" value="">
-                <button style="margin-top:20%;">Log Out</button>
-            </form>
+            <a href="{{url('manageschedule')}}"><button >Schedule</button></a>
+
+            <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
+            
         </div>
         <div style="display:flex; justify-content: flex-end; float:right; align-items:right; ">
             <form action="" method="GET">
@@ -104,6 +86,7 @@
                         <div style="display:flex; margin-top:10px;">
                             <div class="inv-divider" style="width:1200px;">
                             <p style="margin-top:10px; padding:0;" class="general-large-font">Service Details</p>
+                                <input id="name" type="hidden" class="form-input" type="name" name="serviceName" value="{{$service->serviceID}}" default=""/>
                                 <div style="padding:2%;">
                                     <label for="name" value="" class="general-font">Service Name</label>
                                     <input id="name" class="form-input" type="name" name="serviceName" value="{{$service->serviceName}}" required autocomplete="username" default=""/>
@@ -112,12 +95,11 @@
 
                                 <div style="padding:2%;">
                                     <label for="phoneNumber" value="" class="general-font">Service Type</label>
-                                    <select id="serviceType" name="serviceType" class="form-input" value="{{$service->serviceType}}" required>
-                                        <option value="Consultation" >Consultation</option>
-                                        <option value="Scan" >Scan</option>
-                                        <option value="Dressing" >Dressing</option>
+                                    <select id="serviceType" name="serviceType" class="form-input" required>
+                                        <option value="Consultation" {{ $service->serviceType == 'Consultation' ? 'selected' : '' }}>Consultation</option>
+                                        <option value="Scan" {{ $service->serviceType == 'Scan' ? 'selected' : '' }}>Scan</option>
+                                        <option value="Dressing" {{ $service->serviceType == 'Dressing' ? 'selected' : '' }}>Dressing</option>
                                     </select>
-                                    
                                 </div>
 
                                 <div style="padding:2%">

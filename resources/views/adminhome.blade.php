@@ -44,6 +44,9 @@
 
             <a href="{{url('manageadmin')}}"><button >Staff</button></a>
 
+            <a href="{{url('manageschedule')}}"><button >Schedule</button></a>
+            
+
             <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
 
         </div>

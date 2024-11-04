@@ -14,7 +14,8 @@ class UpdateServicesController extends Controller
         return view('updateservices', compact('service','staff'));
     }
 
-    public function update(Request $request, $serviceID){
+    public function update(Request $request){
+        $serviceID=$request->serviceID;
         $service = Services::where('serviceID', $serviceID)->first();
         $serviceName= $request->serviceName;
         $serviceType= $request->serviceType;

@@ -14,6 +14,8 @@ class UpdateAdminsController extends Controller
     }
 
     public function update(Request $request, $staffTableID){
+        $staffID=$request->session()->get('staffID');
+        $staff = Admin::where('staffID', $staffID)->first();
         $staffData = Admin::where('staffID', $staffTableID)->first();
         $staffID= $request->staffDataID;
         $staffPassword= $request->staffDataPassword;
@@ -37,7 +39,7 @@ class UpdateAdminsController extends Controller
         $staffData->staffPassword=$staffPassword;
         $staffData->phoneNumber=$phoneNumber;
         $staffData->save();
-        return view('manageadmin')->with('success', 'Staff data updated successfully.');
+        return redirect('manageadmin')->with('success', 'Staff data updated successfully.');
     }
 
     public function delete($staffTableID){

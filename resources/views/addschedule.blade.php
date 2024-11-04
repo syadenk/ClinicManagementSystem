@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <div>
-        <link rel="stylesheet" type="text/css" href="css/structure.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/structure.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font.css') }}"/>
+        <script src="{{asset('js/sidebar.js')}}"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
         <script src="{{asset('js/sidebar.js')}}"></script>
     </div>
 </head>
-<>
 
     <!--Header contents-->
     <header class="main-header">
@@ -36,6 +36,8 @@
             <a href="{{url('managedoctor')}}"><button >Doctors</button></a>
 
             <a href="{{url('manageadmin')}}"><button >Staff</button></a>
+
+            <a href="{{url('manageschedule')}}"><button >Schedule</button></a>
 
             <a href="{{url('adminLogout')}}"><button style="margin-top:20%;">Log Out</button></a>
 

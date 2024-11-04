@@ -37,7 +37,7 @@
 
         </div>
         <div style="display:flex; justify-content: flex-end; float:right; align-items:right; ">
-            <form action="" method="GET">
+            <form action="{{url('doctorprofile')}}" method="GET">
                 <input type="hidden" name="staffID" value="">
                 <button style="margin-top:13%;">
                     <div style="display:flex; justify-content: center; align-items: center; height:40px; width:auto;" class="profile-button">
